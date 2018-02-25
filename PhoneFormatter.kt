@@ -29,7 +29,7 @@ class PhoneFormatter private constructor(private val phoneCountries: List<PhoneC
                                         .forEach { builder.append(it) }
 
                                 //find and insert mask symbols into builder
-                                it.maskWithCode
+                                it.getMaskWithCode()
                                         ?.let {
                                             var i = 0
                                             while (i < builder.length) {
